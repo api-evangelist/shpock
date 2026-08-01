@@ -1,7 +1,29 @@
 aid: shpock
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/shpock.png
 name: Shpock
-description: Shpock is a company surfaced as a portfolio company of speedinvest and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Shpock is a mobile-first second-hand marketplace and classifieds platform that
+  brings millions of private buyers and sellers together, primarily across the
+  United Kingdom, Austria, and Germany. Users list, discover, and negotiate on
+  pre-owned goods across categories including electronics, fashion, home and
+  garden, vehicles, and property, alongside a Shpock+ for Professionals program
+  for business sellers. Founded in Vienna and backed by Speedinvest, Shpock
+  operates consumer iOS/Android apps and a web experience. As of this enrichment
+  pass Shpock publishes no public developer API, developer portal, or SDKs; the
+  api.shpock.com host exists but is private (returns 401 to unauthenticated
+  requests). This profile therefore captures company identity and probed domain
+  security rather than an API contract.
 url: https://raw.githubusercontent.com/api-evangelist/shpock/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,12 +33,30 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Classifieds
+- Marketplace
+- Second-hand
+- E-commerce
+- Consumer
+- Mobile App
 apis: []
+common:
+- type: DomainSecurity
+  url: security/shpock-domain-security.yml
+- type: Website
+  url: https://www.shpock.com/en-gb
+- type: HelpCenter
+  url: https://support.shpock.com/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
